@@ -1,0 +1,15 @@
+services:
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "3000:3000"
+    environment:
+      - NODE_ENV=development
+      - SANITY_WEBHOOK_SECRET=${SANITY_WEBHOOK_SECRET}
+      - SANITY_TOKEN=${SANITY_TOKEN}
+    volumes:
+      - .:/app
+      - /app/node_modules
+    command: ["npm", "run", "dev"]
