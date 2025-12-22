@@ -31,7 +31,7 @@ const page = () => {
             frameborder="0"
             allowtransparency="true"
             id="ms_booking_iframe"
-            src="https://n1029717.yclients.com"></iframe>
+            src="https://n1843314.yclients.com/"></iframe>
         </div>
       </div>
     </>
