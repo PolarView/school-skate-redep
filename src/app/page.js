@@ -10,6 +10,7 @@ import Bunker from "./components/Bunker";
 import Faq from "./components/Faq";
 import Footer from "./components/Footer";
 import Reviews from "./components/Reviews";
+import Cherdak from "./components/Cherdak";
 
 import { client } from "../sanity/client.js";
 
@@ -66,6 +67,7 @@ export default async function Home() {
       </Suspense>
       <Coaches coaches={coaches} />
       <Bunker />
+      <Cherdak />
       <Reviews />
       <Suspense>
         <Faq faq={faq} />

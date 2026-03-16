@@ -122,7 +122,7 @@ const Navbar = () => {
               <div className="cursor-pointer hover:text-black">Тренеры</div>
             </Link>
             <Link to="bunker" offset={-108} smooth href="#bunker">
-              <div className="cursor-pointer hover:text-black">Скейт-парк</div>
+              <div className="cursor-pointer hover:text-black">Скейт-парки</div>
             </Link>
             <Link smooth href="#faq" offset={-108} to="faq">
               {" "}
@@ -301,7 +301,7 @@ const Navbar = () => {
                     <div onClick={() => setIsMenuOpen(false)}>Тренеры</div>
                   </Link>
                   <Link to="bunker" smooth offset={-63}>
-                    <div onClick={() => setIsMenuOpen(false)}>Скейт-парк</div>
+                    <div onClick={() => setIsMenuOpen(false)}>Скейт-парки</div>
                   </Link>
                   <Link smooth offset={-63} to="faq">
                     {" "}
