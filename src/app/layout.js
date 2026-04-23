@@ -1,4 +1,5 @@
 import "./globals.css";
+import { Suspense } from "react";
 import { Analytics } from "@vercel/analytics/react";
 import Script from "next/script";
 import YandexMetrikaHit from "./components/YandexMetrikaHit";
@@ -20,7 +21,9 @@ export default function RootLayout({ children }) {
     <html lang="ru">
       <body>
         {children}
-        <YandexMetrikaHit />
+        <Suspense fallback={null}>
+          <YandexMetrikaHit />
+        </Suspense>
         <Script id="yandex-metrika" strategy="afterInteractive">
           {`
             (function(m,e,t,r,i,k,a){
