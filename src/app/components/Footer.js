@@ -13,8 +13,8 @@ const Footer = () => {
   return (
     <footer
       id="footer"
-      className="w-full flex flex-col items-center justify-center bg-[#546EFF]   pb-[30px] lg:pb-[100px] md:pt-[100px] pt-[30px] ">
-      <div className=" h-full w-[100%] max-w-[1200px] px-3 flex gap-y-[75px] flex-col items-center">
+      className="w-full flex flex-col items-center justify-center bg-[#546EFF]   pb-[24px] lg:pb-[84px] md:pt-[84px] pt-[24px] ">
+      <div className=" h-full w-[100%] max-w-[1200px] px-3 flex gap-y-[60px] flex-col items-center">
         <div className="w-full  flex-col justify-between space-y-8 items-start ">
           <div className="w-full  flex justify-between items-start max-h-[130px]">
             <h3 className="text-[50px] max-md:text-[35px] max-w-[900px]  font-['Unbounded'] text-white font-semibold leading-[60px] min-md:pb-[62px] self-start">

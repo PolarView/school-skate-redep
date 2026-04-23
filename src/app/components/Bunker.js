@@ -9,7 +9,7 @@ import view2 from "/public/bunker/view2.webp";
 
 const Bunker = () => {
   return (
-    <section id="bunker" className="w-full py-12 max-md:py-8">
+    <section id="bunker" className="w-full pt-14 pb-10 max-md:pt-10 max-md:pb-7">
       <div className="w-full relative max-[900px]:px-2">
         <div className="absolute z-20 top-6 left-1/2 -translate-x-1/2 w-[94%] max-w-[860px] max-[900px]:static max-[900px]:translate-x-0 max-[900px]:w-full max-[900px]:max-w-none max-[900px]:mb-4">
           <div className="rounded-[22px] border border-[#93A4FF]/55 bg-[#111623]/82 backdrop-blur-lg shadow-[0_14px_45px_rgba(0,0,0,0.42)] px-7 py-5 text-center max-[900px]:border-[#111623] max-[900px]:bg-[#111623] max-[900px]:shadow-none max-md:px-4 max-md:py-4">
@@ -82,7 +82,7 @@ const Bunker = () => {
 
       <div
         id="bunker-details"
-        className="max-w-[1200px] mx-auto px-2 mt-12 flex flex-col gap-y-12 scroll-mt-[130px] max-md:scroll-mt-[80px]">
+        className="max-w-[1200px] mx-auto px-2 mt-10 flex flex-col gap-y-10 scroll-mt-[130px] max-md:scroll-mt-[80px]">
         <div className="grid grid-cols-12 gap-5 items-stretch max-[900px]:grid-cols-1">
           <div className="col-span-7 max-[900px]:col-span-1 relative min-h-[520px] max-md:min-h-[320px]">
             <Image

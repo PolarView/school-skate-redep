@@ -5,6 +5,7 @@ import { MdArrowBackIos, MdArrowForwardIos } from "react-icons/md";
 import EnrollPopup from "./popups/EnrollPopup";
 import useEnrollPopup from "../hooks/useEnrollPopup";
 import { useSearchParams } from "next/navigation";
+import { reachMetrikaGoal } from "../lib/yandexMetrika";
 
 const Pricing = ({ pricing }) => {
   const [isEnrollPopupOpen, setIsEnrollPopupOpen] = useEnrollPopup();
@@ -39,7 +40,7 @@ const Pricing = ({ pricing }) => {
     <>
       <section
         id="pricing"
-        className="w-full flex flex-col items-center justify-center px-1  max-md:min-h-[800px] pb-[30px] lg:pb-[100px] md:pt-[100px] pt-[30px] ">
+        className="w-full flex flex-col items-center justify-center px-1  max-md:min-h-[800px] pb-[24px] lg:pb-[84px] md:pt-[84px] pt-[24px] ">
         <div className="  h-full w-[100%] max-w-[1230px] flex flex-col items-center">
           <h2 className="text-[50px] font-['Unbounded'] font-bold leading-[60px] pb-[62px] self-start">
             Цены
@@ -103,7 +104,7 @@ const Pricing = ({ pricing }) => {
                   </div>
                 </div>
                 <button
-                  onClick={() => setIsEnrollPopupOpen(true)}
+                  onClick={() => { reachMetrikaGoal("open_enroll_popup", { source: "pricing", trainingType: item.trainingType }); setIsEnrollPopupOpen(true); }}
                   className="max-w-[320px] max-[450px]:max-w-[280px] h-[56px] min-w-[140px] font-normal font-['Unbounded'] flex justify-center items-center bg-[#546EFF] hover:bg-primaryHovered text-[21px] text-white rounded-[40px] px-[83px]  py-[17px]">
                   <span>Записаться</span>
                 </button>
@@ -118,3 +119,4 @@ const Pricing = ({ pricing }) => {
 };
 
 export default Pricing;
+

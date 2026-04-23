@@ -17,7 +17,7 @@ const Faq = ({ faq }) => {
   return (
     <section
       id="faq"
-      className="w-full flex flex-col items-center justify-center   max-md:min-h-[800px]   md:pt-[100px] pt-[30px] ">
+      className="w-full flex flex-col items-center justify-center   max-md:min-h-[800px]   md:pt-[84px] pt-[24px] ">
       <div className=" h-full w-[100%] max-w-[1230px] flex flex-col px-5 items-center">
         <h2 className="text-[50px] max-md:text-[40px] max-[500px]:text-[34px] font-['Unbounded'] self-start font-bold  leading-[60px] max-md:leading-[44px] md:pb-[62px] pb-5 ">
           Часто задаваемые вопросы
@@ -74,7 +74,7 @@ const Faq = ({ faq }) => {
               </div>
             );
           })}
-          <div className="w-full flex max-[430px]:flex-col items-center md:absolute md:-bottom-[100px] md:-translate-x-[50%] md:left-[50%] pt-10 max-[430px]:gap-y-3 gap-x-3  justify-center">
+          <div className="w-full flex max-[430px]:flex-col items-center md:absolute md:-bottom-[84px] md:-translate-x-[50%] md:left-[50%] pt-8 max-[430px]:gap-y-3 gap-x-3  justify-center">
             <span className="text-[26px] max-[550px]:text-[22px] max-[480px]:text-[18px] max-[430px]:text-[21px] font-['Unbounded'] font-normal">
               Остались вопросы?
             </span>

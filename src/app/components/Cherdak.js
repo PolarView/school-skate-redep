@@ -9,8 +9,8 @@ const Cherdak = () => {
   return (
     <section
       id="cherdak"
-      className="w-full py-12 max-md:py-8 scroll-mt-[130px] max-md:scroll-mt-[80px]">
-      <div className="max-w-[1200px] mx-auto px-2 flex flex-col gap-y-12">
+      className="w-full py-10 max-md:py-7 scroll-mt-[130px] max-md:scroll-mt-[80px]">
+      <div className="max-w-[1200px] mx-auto px-2 flex flex-col gap-y-10">
         <div className="grid grid-cols-12 gap-5 items-stretch max-[900px]:grid-cols-1">
           <div className="col-span-6 max-[900px]:col-span-1 bg-[#F4F7FF] rounded-[18px] p-8 max-md:p-5 flex flex-col justify-between gap-y-8">
             <div className="flex flex-col gap-y-5">
@@ -115,15 +115,15 @@ const Cherdak = () => {
           className="grid grid-cols-12 gap-5 max-[950px]:grid-cols-1 items-start scroll-mt-[130px] max-md:scroll-mt-[80px]">
           <div className="col-span-4 max-[950px]:col-span-1 rounded-[18px] bg-white border border-[#D5DCEC] p-6">
             <p className="font-['Unbounded'] text-[38px] max-md:text-[30px] text-[#191E28]">
-              Cherdak
+              Чердак
             </p>
             <p className="font-['Roboto'] text-[24px] max-md:text-[20px] text-[#191E28] mt-2">
               Ул первого измайловского зверинца д 8
             </p>
 
             <div className="mt-6 space-y-2 font-['Roboto'] text-[20px] text-[#324164]">
-              <p>Будни с 11 до 23</p>
-              <p>Выхи с 10 до 23</p>
+              <p>Будни: 11:00 - 23:00</p>
+              <p>Выходные: 10:00 - 23:00</p>
               <Link href="https://wa.me/79099148469?text=" className="underline text-[#191E28]">
                 +7 909 914 84 69
               </Link>

@@ -4,6 +4,7 @@ import Image from "next/image";
 import EnrollPopup from "./popups/EnrollPopup";
 import previewImage from "/public/preview/preview.webp";
 import useEnrollPopup from "../hooks/useEnrollPopup";
+import { reachMetrikaGoal } from "../lib/yandexMetrika";
 
 const Preview = () => {
   const [isEnrollPopupOpen, setIsEnrollPopupOpen] = useEnrollPopup();
@@ -34,7 +35,7 @@ const Preview = () => {
                   для детей и взрослых в Москве
                 </h1>
                 <button
-                  onClick={() => setIsEnrollPopupOpen(true)}
+                  onClick={() => { reachMetrikaGoal("open_enroll_popup", { source: "preview" }); setIsEnrollPopupOpen(true); }}
                   className="max-w-[320px] min-[550px]:max-w-[500px] min-[800px]:max-w-[320px] max-[450px]:max-w-[280px] h-[56px] min-w-[147px] flex justify-center items-center bg-[#546EFF] hover:bg-primaryHovered text-[21px] text-white rounded-[40px]  px-[83px] py-[17px]  ">
                   <span>Записаться</span>
                 </button>
@@ -494,3 +495,4 @@ const Preview = () => {
 };
 
 export default Preview;
+

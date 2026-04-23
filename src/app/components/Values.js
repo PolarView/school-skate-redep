@@ -3,7 +3,7 @@ import React from "react";
 const Values = () => {
   return (
     <>
-      <section className="w-full flex flex-col items-center justify-center px-2  max-md:min-h-[800px]  md:pt-[100px] pt-[30px] ">
+      <section className="w-full flex flex-col items-center justify-center px-2  max-md:min-h-[800px]  md:pt-[84px] pt-[24px] ">
         <div className="min-[1380px]:w-[80%]  h-full w-[100%] max-w-[1200px] flex flex-col items-center">
           <h2 className="text-[50px] max-md:text-[40px] font-['Unbounded'] font-bold leading-[60px] pb-[62px] self-start">
             Ценности

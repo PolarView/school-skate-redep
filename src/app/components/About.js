@@ -5,7 +5,7 @@ const About = () => {
   return (
     <section
       id="about"
-      className="w-full flex justify-center px-2 min-[1050px]:max-h-[831px] max-md:min-h-[800px]    pt-[100px] pb-[50px] ">
+      className="w-full flex justify-center px-2 min-[1050px]:max-h-[831px] max-md:min-h-[800px] pt-[84px] pb-[40px] ">
       <div className="min-[1380px]:w-[80%] h-full w-[100%] max-w-[1200px] flex flex-col items-center">
         <h2 className="text-[50px] font-['Unbounded'] font-bold leading-[60px] pb-[42px] self-start">
           О школе

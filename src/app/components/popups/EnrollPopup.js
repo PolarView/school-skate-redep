@@ -5,6 +5,7 @@ import { CgWebsite } from "react-icons/cg";
 import { motion } from "framer-motion";
 import useWindowDimentions from "@/app/hooks/useWindowDimentions";
 import Link from "next/link";
+import { reachMetrikaGoal } from "../../lib/yandexMetrika";
 
 const EnrollPopup = ({ setIsEnrollPopupOpen }) => {
   const { windowWidth, windowHeight, isMobile } = useWindowDimentions(700);
@@ -55,6 +56,7 @@ const EnrollPopup = ({ setIsEnrollPopupOpen }) => {
               }`}>
               <button className="flex items-center justify-center max-[700px]:w-[90%] w-[47%] gap-x-2 max-w-[575px] h-[66px] max-[500px]:h-[50px] bg-[#546EFF] hover:bg-primaryHovered px-[32px] py-4 rounded-[96px]">
                 <Link
+                  onClick={() => reachMetrikaGoal("click_telegram", { source: "enroll_popup" })}
                   className="flex items-center justify-center max-[700px]:w-[90%] w-[47%] gap-x-2 max-w-[575px] h-[66px] max-[500px]:h-[50px]  px-[32px] py-4 rounded-[96px]"
                   href="https://t.me/schoolskate_admin">
                   <div>
@@ -78,6 +80,7 @@ const EnrollPopup = ({ setIsEnrollPopupOpen }) => {
 
               <button className="flex items-center justify-center gap-x-2 max-w-[575px] max-[700px]:w-[90%] w-[47%] h-[66px] max-[500px]:h-[50px] bg-whatsapp hover:bg-whatsappHovered px-[32px] py-4 rounded-[96px]">
                 <Link
+                  onClick={() => reachMetrikaGoal("click_whatsapp", { source: "enroll_popup" })}
                   className="flex items-center justify-center gap-x-2 max-w-[575px] max-[700px]:w-[90%] w-[47%] h-[66px] max-[500px]:h-[50px]  px-[32px] py-4 rounded-[96px]"
                   href="https://wa.me/79099148469?text=">
                   <div>
@@ -102,7 +105,7 @@ const EnrollPopup = ({ setIsEnrollPopupOpen }) => {
               </button>
             </div>
             <div className="w-full flex justify-center items-center">
-              <Link className="w-full flex justify-center items-center" href="/enroll-ykl">
+              <Link onClick={() => reachMetrikaGoal("click_online_enroll", { source: "enroll_popup" })} className="w-full flex justify-center items-center" href="/enroll-ykl">
                 <button className="flex items-center justify-center gap-x-2 max-w-[575px]  max-[700px]:w-[90%] w-[47%] h-[66px] max-[500px]:h-[50px] bg-ykl hover:bg-yklHovered px-[32px] py-4 rounded-[96px]">
                   <div>
                     <CgWebsite color="white" fontSize={30} />
@@ -121,3 +124,4 @@ const EnrollPopup = ({ setIsEnrollPopupOpen }) => {
 };
 
 export default EnrollPopup;
+

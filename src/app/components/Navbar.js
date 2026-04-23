@@ -6,6 +6,7 @@ import NextLink from "next/link";
 import { motion } from "framer-motion";
 import EnrollPopup from "./popups/EnrollPopup";
 import useEnrollPopup from "../hooks/useEnrollPopup";
+import { reachMetrikaGoal } from "../lib/yandexMetrika";
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -157,7 +158,7 @@ const Navbar = () => {
           </div>
           <div className="w-full flex min-[1042px]:hidden items-center justify-between">
             <button
-              onClick={() => setIsEnrollPopupOpen(true)}
+              onClick={() => { reachMetrikaGoal("open_enroll_popup", { source: "navbar_desktop" }); setIsEnrollPopupOpen(true); }}
               className="max-w-[200px]  flex items-center justify-start  h-[42px] max-[420px]:h-[32px] min-[1042px]:hidden  border rounded-[40px] text-white  px-5 min-[1288px]:py-2 py-4 bg-[#546EFF] hover:bg-primaryHovered">
               <span>Записаться</span>
             </button>
@@ -913,3 +914,4 @@ const Navbar = () => {
 };
 
 export default Navbar;
+
