@@ -31,31 +31,6 @@ const Bunker = () => {
           <div className="relative h-[680px] max-[1200px]:h-[560px] max-[900px]:h-[420px] max-[500px]:h-[300px]">
             <Image
               placeholder="blur"
-              src={cherdakMainImage}
-              fill
-              alt="Фото скейт-парка Cherdak"
-              className="object-cover max-[900px]:rounded-[18px]"
-            />
-            <div className="absolute top-[50%] left-[50%] select-none -translate-x-[50%] -translate-y-[50%] flex items-center justify-center w-[360px] max-md:w-[280px] h-[140px] max-md:h-[100px] bg-[#191E28] rounded-[18px] -rotate-2">
-              <div className="text-center rotate-2 text-white">
-                <h2 className="font-['Unbounded'] font-semibold text-center text-[56px] max-md:text-[38px]">
-                  Чердак
-                </h2>
-                <p className="font-['Unbounded'] text-center font-normal text-[20px] max-md:text-[13px]">
-                  скейт-парк
-                </p>
-              </div>
-            </div>
-            <Link
-              href="#cherdak"
-              className="absolute bottom-5 left-[50%] -translate-x-[50%] w-11 h-11 rounded-full bg-white/90 text-[#191E28] flex items-center justify-center text-[22px]">
-              &darr;
-            </Link>
-          </div>
-
-          <div className="relative h-[680px] max-[1200px]:h-[560px] max-[900px]:h-[420px] max-[500px]:h-[300px]">
-            <Image
-              placeholder="blur"
               src={bunkerMainImage}
               fill
               alt="Фото скейт-парка Bunker"
@@ -73,6 +48,31 @@ const Bunker = () => {
             </div>
             <Link
               href="#bunker-details"
+              className="absolute bottom-5 left-[50%] -translate-x-[50%] w-11 h-11 rounded-full bg-white/90 text-[#191E28] flex items-center justify-center text-[22px]">
+              &darr;
+            </Link>
+          </div>
+
+          <div className="relative h-[680px] max-[1200px]:h-[560px] max-[900px]:h-[420px] max-[500px]:h-[300px]">
+            <Image
+              placeholder="blur"
+              src={cherdakMainImage}
+              fill
+              alt="Фото скейт-парка Cherdak"
+              className="object-cover max-[900px]:rounded-[18px]"
+            />
+            <div className="absolute top-[50%] left-[50%] select-none -translate-x-[50%] -translate-y-[50%] flex items-center justify-center w-[360px] max-md:w-[280px] h-[140px] max-md:h-[100px] bg-[#191E28] rounded-[18px] -rotate-2">
+              <div className="text-center rotate-2 text-white">
+                <h2 className="font-['Unbounded'] font-semibold text-center text-[56px] max-md:text-[38px]">
+                  Чердак
+                </h2>
+                <p className="font-['Unbounded'] text-center font-normal text-[20px] max-md:text-[13px]">
+                  скейт-парк
+                </p>
+              </div>
+            </div>
+            <Link
+              href="#cherdak"
               className="absolute bottom-5 left-[50%] -translate-x-[50%] w-11 h-11 rounded-full bg-white/90 text-[#191E28] flex items-center justify-center text-[22px]">
               &darr;
             </Link>

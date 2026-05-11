@@ -1,6 +1,9 @@
+"use client";
+
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
+import { Link as ScrollLink } from "react-scroll";
 import { FaTelegramPlane } from "react-icons/fa";
 import { FaTelegram } from "react-icons/fa";
 import { BiSolidPhone } from "react-icons/bi";
@@ -8,6 +11,15 @@ import { CgMail } from "react-icons/cg";
 import footerImage1 from "/public/footer/footer1.webp";
 import footerImage2 from "/public/footer/footer2.webp";
 import footerImage3 from "/public/footer/footer3.webp";
+
+const footerNavLinks = [
+  { to: "about", label: "О школе" },
+  { to: "pricing", label: "Цены" },
+  { to: "coaches", label: "Тренеры" },
+  { to: "bunker", label: "Скейт-парки" },
+  { to: "faq", label: "Вопросы" },
+  { to: "footer", label: "Контакты" },
+];
 
 const Footer = () => {
   return (
@@ -130,6 +142,22 @@ const Footer = () => {
             </button>
           </Link>
         </div>
+
+        <nav
+          aria-label="Навигация в футере"
+          className="w-full grid grid-cols-6 items-center gap-x-8 gap-y-4 border-y border-white/25 py-6 font-['Roboto'] text-[18px] text-white max-lg:grid-cols-3 max-md:grid-cols-2 max-md:gap-3 max-md:py-5 max-md:text-[15px]">
+          {footerNavLinks.map(({ to, label }) => (
+            <ScrollLink
+              key={to}
+              smooth
+              offset={-80}
+              to={to}
+              href={`#${to}`}
+              className="flex h-10 cursor-pointer items-center justify-center rounded-[8px] border border-white/20 px-3 text-center transition-colors hover:bg-white/10 max-md:h-11 max-md:justify-start max-md:px-4">
+              {label}
+            </ScrollLink>
+          ))}
+        </nav>
 
         <div className="w-full flex items-center justify-between ">
           <div className="">

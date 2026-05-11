@@ -7,6 +7,9 @@ import useWindowDimentions from "@/app/hooks/useWindowDimentions";
 import Link from "next/link";
 import { reachMetrikaGoal } from "../../lib/yandexMetrika";
 
+const maxEnrollLink =
+  "https://max.ru/u/f9LHodD0cOIunjcL8cjJ-5z53vNSvhPFH6fLTx2dUZJKPFstK6Vk1oieRX0";
+
 const EnrollPopup = ({ setIsEnrollPopupOpen }) => {
   const { windowWidth, windowHeight, isMobile } = useWindowDimentions(700);
   return (
@@ -49,15 +52,15 @@ const EnrollPopup = ({ setIsEnrollPopupOpen }) => {
           </div>
           <div className="w-full flex-col justify-center pt-[5%] max-[700px]:pt-[16%] space-y-7 max-md:space-y-3 items-center">
             <div
-              className={`w-full flex  justify-between ${
+              className={`w-full flex justify-center ${
                 isMobile
                   ? "flex-col justify-between space-y-7 max-md:space-y-3 items-center"
-                  : "flex-row"
+                  : "flex-row gap-x-7"
               }`}>
               <button className="flex items-center justify-center max-[700px]:w-[90%] w-[47%] gap-x-2 max-w-[575px] h-[66px] max-[500px]:h-[50px] bg-[#546EFF] hover:bg-primaryHovered px-[32px] py-4 rounded-[96px]">
                 <Link
                   onClick={() => reachMetrikaGoal("click_telegram", { source: "enroll_popup" })}
-                  className="flex items-center justify-center max-[700px]:w-[90%] w-[47%] gap-x-2 max-w-[575px] h-[66px] max-[500px]:h-[50px]  px-[32px] py-4 rounded-[96px]"
+                  className="flex w-full items-center justify-center gap-x-2 h-[66px] max-[500px]:h-[50px] px-[32px] py-4 rounded-[96px]"
                   href="https://t.me/schoolskate_admin">
                   <div>
                     <svg
@@ -81,7 +84,7 @@ const EnrollPopup = ({ setIsEnrollPopupOpen }) => {
               <button className="flex items-center justify-center gap-x-2 max-w-[575px] max-[700px]:w-[90%] w-[47%] h-[66px] max-[500px]:h-[50px] bg-whatsapp hover:bg-whatsappHovered px-[32px] py-4 rounded-[96px]">
                 <Link
                   onClick={() => reachMetrikaGoal("click_whatsapp", { source: "enroll_popup" })}
-                  className="flex items-center justify-center gap-x-2 max-w-[575px] max-[700px]:w-[90%] w-[47%] h-[66px] max-[500px]:h-[50px]  px-[32px] py-4 rounded-[96px]"
+                  className="flex w-full items-center justify-center gap-x-2 h-[66px] max-[500px]:h-[50px] px-[32px] py-4 rounded-[96px]"
                   href="https://wa.me/79099148469?text=">
                   <div>
                     <svg
@@ -104,9 +107,28 @@ const EnrollPopup = ({ setIsEnrollPopupOpen }) => {
                 </Link>
               </button>
             </div>
-            <div className="w-full flex justify-center items-center">
-              <Link onClick={() => reachMetrikaGoal("click_online_enroll", { source: "enroll_popup" })} className="w-full flex justify-center items-center" href="/enroll-ykl">
-                <button className="flex items-center justify-center gap-x-2 max-w-[575px]  max-[700px]:w-[90%] w-[47%] h-[66px] max-[500px]:h-[50px] bg-ykl hover:bg-yklHovered px-[32px] py-4 rounded-[96px]">
+            <div
+              className={`w-full flex justify-center items-center ${
+                isMobile ? "flex-col gap-y-3" : "gap-x-7"
+              }`}>
+              <Link
+                onClick={() => reachMetrikaGoal("click_max", { source: "enroll_popup" })}
+                className="flex justify-center items-center max-[700px]:order-2 max-[700px]:w-full w-[47%]"
+                href={maxEnrollLink}>
+                <button className="flex items-center justify-center gap-x-2 max-w-[575px] max-[700px]:w-[90%] w-full h-[66px] max-[500px]:h-[50px] bg-[#0099F7] hover:bg-[#007FDB] px-[32px] py-4 rounded-[96px]">
+                  <div className="font-['Unbounded'] font-bold text-[18px] max-[500px]:text-[15px] text-white">
+                    MAX
+                  </div>
+                  <div className="font-['Unbounded'] font-normal text-[20px] max-[500px]:text-[16px] text-white">
+                    Запись
+                  </div>
+                </button>
+              </Link>
+              <Link
+                onClick={() => reachMetrikaGoal("click_online_enroll", { source: "enroll_popup" })}
+                className="flex justify-center items-center max-[700px]:order-1 max-[700px]:w-full w-[47%]"
+                href="/enroll-ykl">
+                <button className="flex items-center justify-center gap-x-2 max-w-[575px] max-[700px]:w-[90%] w-full h-[66px] max-[500px]:h-[50px] bg-ykl hover:bg-yklHovered px-[32px] py-4 rounded-[96px]">
                   <div>
                     <CgWebsite color="white" fontSize={30} />
                   </div>
